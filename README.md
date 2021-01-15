@@ -1,1 +1,1 @@
-# python_practice
+# This is a series files of Python practice.
