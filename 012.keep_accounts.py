@@ -1,11 +1,16 @@
-# File open
-list = []
-with open('012.my_accounts.csv', 'r', encoding = 'utf-8') as f:
-    for line in f:
-    	if 'Item, Price' in line:
-    		continue                                                                                                                                                                                                                                                                                                                                                                                    
-    	item, price = line.strip().split(',')
-    	list.append([item, price])
+# File check
+import os
+if os.path.isfile('012.my_accounts.csv'):
+    print('File opened')
+    with open('012.my_accounts.csv', 'r', encoding = 'utf-8') as f:
+        for line in f:
+    	    if 'Item, Price' in line:
+    		    continue                                                                                                                                                                                                                                                                                                                                                                                    
+    	    item, price = line.strip().split(',')
+    	    list.append([item, price])  
+    print(list)
+else:
+    print('No record found')    	
 
 # User key-in
 while True:
